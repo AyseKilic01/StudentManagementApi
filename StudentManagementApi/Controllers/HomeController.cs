@@ -10,7 +10,7 @@ namespace StudentManagementApi.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Online Student Management System";
 
             return View();
         }
