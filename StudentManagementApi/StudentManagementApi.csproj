@@ -168,7 +168,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Business\Concrete\CourseManager.cs" />
     <Compile Include="Models\Business\Concrete\StudentManager.cs" />
+    <Compile Include="Models\Business\Concrete\TeacherManager.cs" />
     <Compile Include="Models\DataAccess\Abstract\IRepository.cs" />
     <Compile Include="Models\DataAccess\Concrete\ManageContext.cs" />
     <Compile Include="Models\DataAccess\Concrete\Repositories\GenericRepository.cs" />
