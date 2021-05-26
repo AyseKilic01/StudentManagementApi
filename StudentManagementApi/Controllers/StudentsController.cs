@@ -1,4 +1,6 @@
 ﻿using StudentManagementApi.Models.Business.Concrete;
+using StudentManagementApi.Models.Concrete;
+using StudentManagementApi.Models.DataAccess.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,25 @@ namespace StudentManagementApi.Controllers
         {
             var studentvalues = student.GetAllBL();
             return Ok(studentvalues);
+        }
+        // POST api/students
+        public HttpResponseMessage Post([FromBody]Student student)
+        {
+            try
+            {
+                using (ManageContext entities = new ManageContext())
+                {
+                    entities.Students.Add(student);
+                    entities.SaveChanges();
+                    var message = Request.CreateResponse(HttpStatusCode.Created, student);
+                    message.Headers.Location = new Uri(Request.RequestUri + student.SID.ToString());
+                    return message;
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
         }
     }
 }
