@@ -14,5 +14,9 @@ namespace StudentManagementApi.Models.Business.Concrete
         {
             return repository.List();
         }
+        public List<Student> GetAllBL(int id)
+        {
+            return repository.List().Where(x=>x.SID == id).ToList();
+        }
     }
 }

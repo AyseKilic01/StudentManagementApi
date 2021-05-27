@@ -7,16 +7,23 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace StudentManagementApi.Controllers
 {
+    [EnableCors("*", "*", "get")]
     public class ListController : ApiController
     {
         StudentManager student = new StudentManager();
         // GET api/students
-        public IHttpActionResult GetValues()
+        public IHttpActionResult getstudent()
         {
             var studentvalues = student.GetAllBL();
+            return Ok(studentvalues);
+        }
+        public IHttpActionResult getstudent(int ID)
+        {
+            var studentvalues = student.GetAllBL(ID);
             return Ok(studentvalues);
         }
         // POST api/students
