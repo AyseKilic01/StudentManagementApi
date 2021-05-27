@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace StudentManagementApi.Controllers
 {
-    public class CoursesController : ApiController
+    public class LoginController : ApiController
     {
         CourseManager course = new CourseManager();
         // GET api/values

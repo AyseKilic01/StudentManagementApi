@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace StudentManagementApi.Controllers
 {
-    public class StudentsController : ApiController
+    public class ListController : ApiController
     {
         StudentManager student = new StudentManager();
         // GET api/students
