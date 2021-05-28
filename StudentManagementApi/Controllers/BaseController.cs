@@ -21,9 +21,9 @@ namespace StudentManagementApi.Controllers
         #endregion
 
         // POST api/values
-        public void PostStudent([FromBody]string value)
+        public void PostStudent([FromBody]Student students)
         {
-           
+            student.Add(students);
         }
         public void PostTeacher([FromBody]string value)
         {

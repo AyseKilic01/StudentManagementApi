@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagementApi.Models.DataAccess.Abstract
 {
+    //example repository pattern
     public interface IRepository<T>
     {
         List<T> List();
