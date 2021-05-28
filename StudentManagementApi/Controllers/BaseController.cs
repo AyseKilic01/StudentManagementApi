@@ -12,24 +12,24 @@ using System.Web.Mvc;
 
 namespace StudentManagementApi.Controllers
 {
-    public class ValuesController : ApiController
+    public class BaseController : ApiController
     {
+        #region objects
         StudentManager student = new StudentManager();
-        // GET api/values
-        public IHttpActionResult GetValues()
-        {
-            var studentvalues = student.GetAllBL();
-            return Ok(studentvalues);
-        }
-
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        TeacherManager teacher = new TeacherManager();
+        CourseManager course = new CourseManager();
+        #endregion
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void PostStudent([FromBody]string value)
+        {
+           
+        }
+        public void PostTeacher([FromBody]string value)
+        {
+
+        }
+        public void PostCourse([FromBody]string value)
         {
 
         }

@@ -14,12 +14,12 @@ namespace StudentManagementApi.Models.Business.Concrete
 
         public void Add(Course prop)
         {
-            throw new NotImplementedException();
+            repository.Insert(prop);
         }
 
         public void Delete(Course prop)
         {
-            throw new NotImplementedException();
+            repository.Delete(prop);
         }
 
         public List<Course> GetAllBL()
@@ -33,7 +33,7 @@ namespace StudentManagementApi.Models.Business.Concrete
 
         public void Update(Course prop)
         {
-            throw new NotImplementedException();
+           repository.Update(prop);
         }
     }
 }
