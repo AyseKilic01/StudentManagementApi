@@ -14,7 +14,12 @@ namespace StudentManagementApi.Controllers
     [EnableCors("*", "*", "get")]
     public class ListController : ApiController
     {
+        #region objects
         StudentManager student = new StudentManager();
+        CourseManager course = new CourseManager();
+        TeacherManager teacher = new TeacherManager();
+        #endregion
+
         // GET api/students
         public IHttpActionResult getstudent()
         {
@@ -25,6 +30,26 @@ namespace StudentManagementApi.Controllers
         {
             var studentvalues = student.GetAllBL(ID);
             return Ok(studentvalues);
+        }
+        public IHttpActionResult getcourse()
+        {
+            var coursevalues = course.GetAllBL();
+            return Ok(coursevalues);
+        }
+        public IHttpActionResult getcourse(int ID)
+        {
+            var coursevalues = course.GetAllBL(ID);
+            return Ok(coursevalues);
+        }
+        public IHttpActionResult getteacher()
+        {
+            var teachervalues = teacher.GetAllBL();
+            return Ok(teachervalues);
+        }
+        public IHttpActionResult getteacher(int ID)
+        {
+            var teachervalues = teacher.GetAllBL(ID);
+            return Ok(teachervalues);
         }
         // POST api/students
         public HttpResponseMessage Post([FromBody]Student student)

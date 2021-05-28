@@ -176,6 +176,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Business\Abstract\IService.cs" />
     <Compile Include="Models\Business\Concrete\CourseManager.cs" />
     <Compile Include="Models\Business\Concrete\StudentManager.cs" />
     <Compile Include="Models\Business\Concrete\TeacherManager.cs" />
