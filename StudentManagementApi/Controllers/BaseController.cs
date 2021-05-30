@@ -1,14 +1,6 @@
 ﻿using StudentManagementApi.Models.Business.Concrete;
 using StudentManagementApi.Models.Concrete;
-using StudentManagementApi.Models.DataAccess.Concrete;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace StudentManagementApi.Controllers
 {
@@ -23,6 +15,7 @@ namespace StudentManagementApi.Controllers
         // POST api/values
         public void PostStudent([FromBody]Student students)
         {
+
             student.Add(students);
         }
         public void PostTeacher([FromBody]string value)

@@ -192,6 +192,7 @@
     <Compile Include="Models\Entities\Concrete\Course.cs" />
     <Compile Include="Models\Entities\Concrete\Student.cs" />
     <Compile Include="Models\Entities\Concrete\Teacher.cs" />
+    <Compile Include="Models\Utilities\ValidationTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
