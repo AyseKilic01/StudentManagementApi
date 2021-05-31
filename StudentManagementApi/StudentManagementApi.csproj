@@ -56,6 +56,9 @@
       <HintPath>..\packages\FluentValidation.10.2.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -183,8 +186,11 @@
     <Compile Include="Models\Business\Concrete\CourseManager.cs" />
     <Compile Include="Models\Business\Concrete\StudentManager.cs" />
     <Compile Include="Models\Business\Concrete\TeacherManager.cs" />
+    <Compile Include="Models\Business\DependecnyResolvers\BusinessModule.cs" />
     <Compile Include="Models\Business\ValidationRules\StudentValidation.cs" />
     <Compile Include="Models\DataAccess\Abstract\IRepository.cs" />
+    <Compile Include="Models\DataAccess\Abstract\IStudentDAL.cs" />
+    <Compile Include="Models\DataAccess\Concrete\EStudentDAL.cs" />
     <Compile Include="Models\DataAccess\Concrete\ManageContext.cs" />
     <Compile Include="Models\DataAccess\Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Models\Entities\Abstract\IEntity.cs" />
@@ -192,7 +198,7 @@
     <Compile Include="Models\Entities\Concrete\Course.cs" />
     <Compile Include="Models\Entities\Concrete\Student.cs" />
     <Compile Include="Models\Entities\Concrete\Teacher.cs" />
-    <Compile Include="Models\Utilities\ValidationTool.cs" />
+    <Compile Include="Models\Business\Utilities\ValidationTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

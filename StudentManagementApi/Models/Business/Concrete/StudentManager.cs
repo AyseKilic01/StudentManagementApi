@@ -2,7 +2,7 @@
 using StudentManagementApi.Models.Business.ValidationRules;
 using StudentManagementApi.Models.Concrete;
 using StudentManagementApi.Models.DataAccess.Concrete.Repositories;
-using StudentManagementApi.Models.Utilities;
+using StudentManagementApi.Models.Business.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

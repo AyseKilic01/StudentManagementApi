@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace StudentManagementApi.Models.Utilities
+namespace StudentManagementApi.Models.Business.Utilities
 {
     //sıklıkla kullanıyorsan static
     public static class ValidationTool
