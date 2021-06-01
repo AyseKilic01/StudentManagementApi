@@ -1,5 +1,6 @@
 ﻿using StudentManagementApi.Models.Business.Concrete;
 using StudentManagementApi.Models.Concrete;
+using StudentManagementApi.Models.DataAccess.Abstract;
 using StudentManagementApi.Models.DataAccess.Concrete;
 using System;
 using System.Net;
@@ -13,9 +14,9 @@ namespace StudentManagementApi.Controllers
     public class ListController : ApiController
     {
         #region objects
-        StudentManager student = new StudentManager();
-        CourseManager course = new CourseManager();
-        TeacherManager teacher = new TeacherManager();
+        StudentManager student = new StudentManager(new IStudentDAL());
+        CourseManager course;
+        TeacherManager teacher;
         #endregion
 
         // GET api/students

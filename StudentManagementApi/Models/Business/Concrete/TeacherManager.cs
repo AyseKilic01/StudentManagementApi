@@ -1,5 +1,6 @@
 ﻿using StudentManagementApi.Models.Business.Abstract;
 using StudentManagementApi.Models.Concrete;
+using StudentManagementApi.Models.DataAccess.Abstract;
 using StudentManagementApi.Models.DataAccess.Concrete.Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,30 +11,36 @@ namespace StudentManagementApi.Models.Business.Concrete
 {
     public class TeacherManager : IService<Teacher>
     {
-        GenericRepository<Teacher> repository = new GenericRepository<Teacher>();
+        //GenericRepository<Teacher> repository = new GenericRepository<Teacher>();
+        ITeacherDAL _dal;
+
+        public TeacherManager(ITeacherDAL dal)
+        {
+            _dal = dal;
+        }
 
         public void Add(Teacher prop)
         {
-            repository.Insert(prop);
+            _dal.Insert(prop);
         }
 
         public void Delete(Teacher prop)
         {
-            repository.Delete(prop);
+            _dal.Delete(prop);
         }
 
         public List<Teacher> GetAllBL()
         {
-            return repository.List();
+            return _dal.List();
         }
         public List<Teacher> GetAllBL(int id)
         {
-            return repository.List().Where(x => x.TID == id).ToList();
+            return _dal.List().Where(x => x.TID == id).ToList();
         }
 
         public void Update(Teacher prop)
         {
-            repository.Update(prop);
+            _dal.Update(prop);
         }
     }
 }

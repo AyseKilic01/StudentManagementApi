@@ -6,10 +6,10 @@ namespace StudentManagementApi.Controllers
 {
     public class BaseController : ApiController
     {
-        #region objects
-        StudentManager student = new StudentManager();
-        TeacherManager teacher = new TeacherManager();
-        CourseManager course = new CourseManager();
+        #region objects       
+        StudentManager student;
+        TeacherManager teacher;
+        CourseManager course;
         #endregion
 
         // POST api/values

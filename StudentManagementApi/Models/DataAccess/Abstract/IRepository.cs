@@ -11,7 +11,6 @@ namespace StudentManagementApi.Models.DataAccess.Abstract
     public interface IRepository<T>
     {
         List<T> List();
-
         void Insert(T p);
         void Update(T p);
         void Delete(T p);

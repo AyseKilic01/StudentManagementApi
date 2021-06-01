@@ -7,39 +7,46 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using StudentManagementApi.Models.DataAccess.Abstract;
 
 namespace StudentManagementApi.Models.Business.Concrete
 {
     public class StudentManager : IService<Student>
     {
         #region objects
-        GenericRepository<Student> repository = new GenericRepository<Student>();
+        //GenericRepository<Student> repository = new GenericRepository<Student>();
+        IStudentDAL _dal;
         StudentValidation validation = new StudentValidation();
+
+        public StudentManager(IStudentDAL dal)
+        {
+            _dal = dal;
+        }
         #endregion
         public void Add(Student prop)
         {
             ValidationTool.Validate(new StudentValidation(), prop);
-            repository.Insert(prop);
+            _dal.Insert(prop);
         }
 
         public void Delete(Student prop)
         {
-            repository.Delete(prop);
+            _dal.Delete(prop);
         }
 
         public List<Student> GetAllBL()
         {
-            return repository.List();
+            return _dal.List();
         }
         public List<Student> GetAllBL(int id)
         {
-            return repository.List().Where(x=>x.SID == id).ToList();
+            return _dal.List().Where(x=>x.SID == id).ToList();
         }
 
         public void Update(Student prop)
         {
             ValidationTool.Validate(new StudentValidation(), prop);
-            repository.Update(prop);
+            _dal.Update(prop);
         }
     }
 }

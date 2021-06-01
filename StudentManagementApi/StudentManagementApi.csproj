@@ -188,9 +188,11 @@
     <Compile Include="Models\Business\Concrete\TeacherManager.cs" />
     <Compile Include="Models\Business\DependecnyResolvers\BusinessModule.cs" />
     <Compile Include="Models\Business\ValidationRules\StudentValidation.cs" />
+    <Compile Include="Models\DataAccess\Abstract\IAdminDAL.cs" />
+    <Compile Include="Models\DataAccess\Abstract\ICourseDAL.cs" />
     <Compile Include="Models\DataAccess\Abstract\IRepository.cs" />
     <Compile Include="Models\DataAccess\Abstract\IStudentDAL.cs" />
-    <Compile Include="Models\DataAccess\Concrete\EStudentDAL.cs" />
+    <Compile Include="Models\DataAccess\Abstract\ITeacherDAL.cs" />
     <Compile Include="Models\DataAccess\Concrete\ManageContext.cs" />
     <Compile Include="Models\DataAccess\Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Models\Entities\Abstract\IEntity.cs" />

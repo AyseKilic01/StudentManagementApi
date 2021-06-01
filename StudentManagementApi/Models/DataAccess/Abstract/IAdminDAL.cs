@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentManagementApi.Models.DataAccess.Abstract
 {
-    public interface IStudentDAL : IRepository<Student>
+   public interface IAdminDAL : IRepository<Admin>
     {
     }
 }

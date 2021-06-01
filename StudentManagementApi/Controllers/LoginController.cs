@@ -10,7 +10,7 @@ namespace StudentManagementApi.Controllers
 {
     public class LoginController : ApiController
     {
-        CourseManager course = new CourseManager();
+        CourseManager course;
         // GET api/values
         public IHttpActionResult GetValues()
         {
