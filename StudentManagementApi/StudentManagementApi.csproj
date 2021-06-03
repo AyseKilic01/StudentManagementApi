@@ -193,8 +193,11 @@
     <Compile Include="Models\DataAccess\Abstract\IRepository.cs" />
     <Compile Include="Models\DataAccess\Abstract\IStudentDAL.cs" />
     <Compile Include="Models\DataAccess\Abstract\ITeacherDAL.cs" />
+    <Compile Include="Models\DataAccess\Concrete\CourseDAL.cs" />
     <Compile Include="Models\DataAccess\Concrete\ManageContext.cs" />
     <Compile Include="Models\DataAccess\Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="Models\DataAccess\Concrete\StudentDAL.cs" />
+    <Compile Include="Models\DataAccess\Concrete\TeacherDAL.cs" />
     <Compile Include="Models\Entities\Abstract\IEntity.cs" />
     <Compile Include="Models\Entities\Concrete\Admin.cs" />
     <Compile Include="Models\Entities\Concrete\Course.cs" />

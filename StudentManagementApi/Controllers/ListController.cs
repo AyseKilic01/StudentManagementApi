@@ -14,9 +14,9 @@ namespace StudentManagementApi.Controllers
     public class ListController : ApiController
     {
         #region objects
-        StudentManager student = new StudentManager(new IStudentDAL());
-        CourseManager course;
-        TeacherManager teacher;
+        StudentManager student = new StudentManager(new StudentDAL());
+        CourseManager course = new CourseManager(new CourseDAL());
+        TeacherManager teacher = new TeacherManager(new TeacherDAL());
         #endregion
 
         // GET api/students
